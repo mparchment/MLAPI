@@ -66,3 +66,6 @@ app = Flask(__name__)
 @app.route('/toarabic/<word>', methods=['GET'])
 def return_word(word):
     return jsonify({'word': transliterate(word)})
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=3000)
